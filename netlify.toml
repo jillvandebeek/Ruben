@@ -1,0 +1,27 @@
+# Statische site: geen build nodig, Netlify publiceert gewoon de map "public".
+[build]
+  publish = "public"
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Elke onbekende URL komt gewoon terug op de quiz.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

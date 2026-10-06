@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>De Grote Ruby Quiz 💖</title>
+  <meta name="description" content="Een liefdesquiz voor Ruby, van zijn madammeke.">
+  <meta name="theme-color" content="#ff5c8a">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hearts-bg" aria-hidden="true"></div>
+
+  <main class="card" id="app">
+    <!-- Startscherm -->
+    <section class="screen active" id="screen-start">
+      <div class="big-heart" aria-hidden="true">💘</div>
+      <h1>De Grote Ruby Quiz</h1>
+      <p class="lead">Hey Ruby! 🥰<br>Je madammeke heeft 7 vraagjes voor jou.<br>Hoe beter je antwoordt, hoe meer kusjes je verdient&nbsp;😘</p>
+      <button class="btn" id="start-btn" type="button">Laat maar komen! 💕</button>
+    </section>
+
+    <!-- Vraagscherm -->
+    <section class="screen" id="screen-question">
+      <div class="progress" aria-hidden="true" id="progress"></div>
+      <p class="counter" id="counter"></p>
+      <h2 id="question-text"></h2>
+      <form id="answer-form" autocomplete="off" novalidate>
+        <div id="answer-area"></div>
+        <p class="hint" id="hint" role="alert"></p>
+        <button class="btn" type="submit" id="next-btn">Volgende 💌</button>
+      </form>
+    </section>
+
+    <!-- Resultaat -->
+    <section class="screen" id="screen-result">
+      <div class="big-heart beat" aria-hidden="true">💖</div>
+      <h1 id="result-title">Heel goed Ruby!</h1>
+      <p class="lead" id="result-text"></p>
+      <div class="kisses" id="kisses" aria-hidden="true"></div>
+      <ul class="review" id="review"></ul>
+      <button class="btn secondary" id="restart-btn" type="button">Nog eens proberen 🔁</button>
+    </section>
+  </main>
+
+  <footer>Met heel veel liefde gemaakt voor Ruby 💞</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
