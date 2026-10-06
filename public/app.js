@@ -17,8 +17,8 @@
     {
       text: "Sinds wanneer zijn we al samen? 💑",
       type: "date",
-      correct: "2026-12-16",
-      display: "16/12/2026",
+      correct: "2023-12-16",
+      display: "16/12/2023",
     },
     {
       text: "Wat was onze eerste date? ☕",
